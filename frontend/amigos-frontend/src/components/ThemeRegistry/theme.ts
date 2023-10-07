@@ -16,6 +16,14 @@ const theme = createTheme({
     fontFamily: ntr.style.fontFamily,
   },
   components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          "&:hover": {transform: "scale(1.05)"},
+          transition: "transform 0.15s ease-in-out"
+        }
+      }
+    },
     MuiAlert: {
       styleOverrides: {
         root: ({ ownerState }) => ({

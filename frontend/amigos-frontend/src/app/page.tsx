@@ -8,6 +8,7 @@ import Alert from "@mui/material/Alert";
 import AlertTitle from "@mui/material/AlertTitle";
 import { MediaCard } from "@/components/MediaCard";
 import { Divider, Grid } from "@mui/material";
+import { AboutUs } from "@/components/AboutUs";
 
 export default function HomePage() {
   return (
@@ -70,7 +71,7 @@ export default function HomePage() {
           </div>
         </Grid>
         <Grid item xs={12}>
-          Labas
+        <AboutUs />
         </Grid>
       </Grid>
     </Box>
