@@ -8,20 +8,20 @@ interface Props {}
 const HowItWorks: React.FC<Props> = () => {
   const items: Item[] = [
     {
-      name: "Random Name #1",
+      name: "Step #1",
       description: "Probably the most random thing you have ever seen!",
     },
     {
-      name: "Random Name #2",
+      name: "Step #2",
       description: "Hello World!",
     },
     {
-      name: "Random Name #3",
-      description: "Hello World!",
+      name: "Step #3",
+      description: "Data processed for map",
     },
     {
-      name: "Random Name #4",
-      description: "Hello World!",
+      name: "Step #4",
+      description: "Map view with prediction and current status across the globe",
     },
   ];
 
@@ -29,10 +29,10 @@ const HowItWorks: React.FC<Props> = () => {
     <Grid container>
       <Grid item xs={12}>
         <Typography variant="h1" component="h1">
-          Hello There
+          /how-it-works
         </Typography>
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12}  style={{textAlign: "center"}}>
         <Carousel items={items} animation="slide" />
       </Grid>
     </Grid>
