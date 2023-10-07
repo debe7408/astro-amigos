@@ -4,10 +4,7 @@ import Box from "@mui/material/Box";
 import { Grid } from "@mui/material";
 import { AboutUs } from "@/components/AboutUs";
 import { OurMission } from "@/components/OurMission";
-import "./componentCss.css";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-
 export default function HomePage() {
   return (
     <Box sx={{ display: "flex", overflow: "hidden" }}>
@@ -70,10 +67,18 @@ export default function HomePage() {
           </div>
         </Grid>
         <Grid item xs={12}>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+          >
             <OurMission />
           </motion.div>
-          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+          >
             <AboutUs />
           </motion.div>
         </Grid>
