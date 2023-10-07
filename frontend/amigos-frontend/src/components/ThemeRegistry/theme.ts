@@ -1,4 +1,4 @@
-import { Roboto } from "next/font/google";
+import { Roboto, NTR } from "next/font/google";
 import { createTheme } from "@mui/material/styles";
 import { colors } from "@/constants/colors";
 
@@ -9,12 +9,18 @@ const roboto = Roboto({
   display: "swap",
 });
 
+const ntr = NTR({
+  weight: ["400"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
 const theme = createTheme({
   palette: {
     mode: "dark",
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: ntr.style.fontFamily,
   },
   components: {
     MuiAlert: {

@@ -29,8 +29,8 @@ const DRAWER_WIDTH = 240;
 
 const LINKS = [
   { text: "Home", href: "/", icon: HomeIcon },
-  { text: "Starred", href: "/starred", icon: StarIcon },
-  { text: "Tasks", href: "/tasks", icon: ChecklistIcon },
+  { text: "About Us", href: "/starred", icon: StarIcon },
+  { text: "Our Project", href: "/tasks", icon: ChecklistIcon },
 ];
 
 const PLACEHOLDER_LINKS = [
@@ -56,17 +56,37 @@ export default function RootLayout({
               <Typography variant="h6" noWrap component="div" color="black">
                 Amigos UI
               </Typography>
+              <List
+                sx={{
+                  flexDirection: "row",
+                  display: "flex",
+                  alignItems: "center",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {LINKS.map(({ text, href, icon: Icon }) => (
+                  <ListItem key={href} disablePadding>
+                    <ListItemButton component={Link} href={href}>
+                      <ListItemIcon>
+                        <Icon />
+                      </ListItemIcon>
+                      <ListItemText primary={text} />
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+              <Divider sx={{ mt: "auto" }} />
             </Toolbar>
           </AppBar>
           <Box
             component="main"
-            sx={{
-              flexGrow: 1,
-      
-              ml: `${DRAWER_WIDTH}px`,
-              mt: ["48px", "56px", "64px"],
-              p: 3,
-            }}
+            // sx={{
+            //   flexGrow: 1,
+
+            //   ml: `${DRAWER_WIDTH}px`,
+            //   mt: ["48px", "56px", "64px"],
+            //   p: 3,
+            // }}
           >
             {children}
           </Box>
