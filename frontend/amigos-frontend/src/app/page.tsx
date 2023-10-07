@@ -1,15 +1,10 @@
+"use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
-import { MediaCard } from "@/components/MediaCard";
-import { Divider, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { AboutUs } from "@/components/AboutUs";
-
+import { OurMission } from "@/components/OurMission";
+import { motion } from "framer-motion";
 export default function HomePage() {
   return (
     <Box sx={{ display: "flex", overflow: "hidden" }}>
@@ -46,13 +41,14 @@ export default function HomePage() {
                   paddingLeft: "200px",
                   fontSize: "86px",
                   fontWeight: "700",
-                  background:
-                    "-webkit-linear-gradient(to right, #ccd6f6 70%, #64ffda 50%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  // background:
+                  //   "-webkit-linear-gradient(to right, #ccd6f6 70%, #64ffda 50%)",
+                  // WebkitBackgroundClip: "text",
+                  // WebkitTextFillColor: "transparent",
                 }}
               >
-                satellite sage
+                <span style={{ color: "#ccd6f6" }}>satellite</span>
+                <span style={{ color: "#64ffda" }}>sage</span>
               </div>
 
               <div
@@ -71,7 +67,20 @@ export default function HomePage() {
           </div>
         </Grid>
         <Grid item xs={12}>
-        <AboutUs />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+          >
+            <OurMission />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+          >
+            <AboutUs />
+          </motion.div>
         </Grid>
       </Grid>
     </Box>
