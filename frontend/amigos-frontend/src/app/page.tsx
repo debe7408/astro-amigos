@@ -1,14 +1,12 @@
+"use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Drawer from "@mui/material/Drawer";
-import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import Alert from "@mui/material/Alert";
-import AlertTitle from "@mui/material/AlertTitle";
-import { MediaCard } from "@/components/MediaCard";
-import { Divider, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { AboutUs } from "@/components/AboutUs";
+import { OurMission } from "@/components/OurMission";
+import "./componentCss.css";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function HomePage() {
   return (
@@ -72,7 +70,12 @@ export default function HomePage() {
           </div>
         </Grid>
         <Grid item xs={12}>
-          <AboutUs />
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+            <OurMission />
+          </motion.div>
+          <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+            <AboutUs />
+          </motion.div>
         </Grid>
       </Grid>
     </Box>
