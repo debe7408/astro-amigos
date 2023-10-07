@@ -28,9 +28,9 @@ export const metadata = {
 const DRAWER_WIDTH = 240;
 
 const LINKS = [
-  { text: "Home", href: "/", icon: HomeIcon },
-  { text: "About Us", href: "/starred", icon: StarIcon },
-  { text: "Our Project", href: "/tasks", icon: ChecklistIcon },
+  { text: "/home", href: "/" },
+  { text: "/about-us", href: "/starred" },
+  { text: "/our-project", href: "/tasks" },
 ];
 
 const PLACEHOLDER_LINKS = [
@@ -58,19 +58,17 @@ export default function RootLayout({
               </Typography>
               <List
                 sx={{
+                  color: "#64ffda",
                   flexDirection: "row",
                   display: "flex",
                   alignItems: "center",
                   whiteSpace: "nowrap",
                 }}
               >
-                {LINKS.map(({ text, href, icon: Icon }) => (
+                {LINKS.map(({ text, href }) => (
                   <ListItem key={href} disablePadding>
                     <ListItemButton component={Link} href={href}>
-                      <ListItemIcon>
-                        <Icon />
-                      </ListItemIcon>
-                      <ListItemText primary={text} />
+                      <ListItemText sx={{ fontWeight: "700" }} primary={text} />
                     </ListItemButton>
                   </ListItem>
                 ))}
