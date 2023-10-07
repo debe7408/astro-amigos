@@ -16,13 +16,23 @@ const theme = createTheme({
     fontFamily: ntr.style.fontFamily,
   },
   components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "#64ffda",
+          borderColor: "#64ffda",
+          textTransform: "lowercase",
+          "&:hover": { color: "#64ffda", borderColor: "#64ffda" },
+        },
+      },
+    },
     MuiCard: {
       styleOverrides: {
         root: {
-          "&:hover": {transform: "scale(1.05)"},
-          transition: "transform 0.15s ease-in-out"
-        }
-      }
+          "&:hover": { transform: "scale(1.05)" },
+          transition: "transform 0.15s ease-in-out",
+        },
+      },
     },
     MuiAlert: {
       styleOverrides: {
