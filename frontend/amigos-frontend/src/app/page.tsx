@@ -46,13 +46,14 @@ export default function HomePage() {
                   paddingLeft: "200px",
                   fontSize: "86px",
                   fontWeight: "700",
-                  background:
-                    "-webkit-linear-gradient(to right, #ccd6f6 70%, #64ffda 50%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  // background:
+                  //   "-webkit-linear-gradient(to right, #ccd6f6 70%, #64ffda 50%)",
+                  // WebkitBackgroundClip: "text",
+                  // WebkitTextFillColor: "transparent",
                 }}
               >
-                satellite sage
+                <span style={{ color: "#ccd6f6" }}>satellite</span>
+                <span style={{ color: "#64ffda" }}>sage</span>
               </div>
 
               <div
@@ -71,7 +72,7 @@ export default function HomePage() {
           </div>
         </Grid>
         <Grid item xs={12}>
-        <AboutUs />
+          <AboutUs />
         </Grid>
       </Grid>
     </Box>
