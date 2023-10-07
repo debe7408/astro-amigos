@@ -29,7 +29,7 @@ export default function HomePage() {
         top: "50%",
         left: "50%",
         transform: "translate(-50%, -50%)",
-        position: "absolute"
+        position: "fixed"
       }}>
         <span>ASTRO AMIGOS</span>
       </div>
