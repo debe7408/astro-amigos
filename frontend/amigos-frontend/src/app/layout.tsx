@@ -30,7 +30,7 @@ const DRAWER_WIDTH = 240;
 const LINKS = [
   { text: "/home", href: "/" },
   { text: "/about-us", href: "/starred" },
-  { text: "/our-project", href: "/tasks" },
+  { text: "/how-it-works", href: "/how-it-works" },
 ];
 
 const PLACEHOLDER_LINKS = [
@@ -48,7 +48,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeRegistry>
-          <AppBar position="fixed" sx={{ zIndex: 2000 }}>
+          <AppBar position="fixed" sx={{ zIndex: 2000 }} component="nav">
             <Toolbar sx={{ backgroundColor: "background.paper" }}>
               <DashboardIcon
                 sx={{ color: "#444", mr: 2, transform: "translateY(-2px)" }}
@@ -78,13 +78,10 @@ export default function RootLayout({
           </AppBar>
           <Box
             component="main"
-            // sx={{
-            //   flexGrow: 1,
-
-            //   ml: `${DRAWER_WIDTH}px`,
-            //   mt: ["48px", "56px", "64px"],
-            //   p: 3,
-            // }}
+            sx={{
+              flexGrow: 1,
+              mt: ["48px", "56px", "64px"],
+            }}
           >
             {children}
           </Box>
