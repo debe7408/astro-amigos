@@ -11,7 +11,7 @@ import { CardActionArea, CardMedia, Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const LINKS = [{ text: "/how-it-works", href: "/how-it-works" }];
+const LINKS = [{ text: "/prototype", href: "/prototype" }];
 
 export const OurMission: React.FC = ({}: {}) => {
   return (
@@ -36,7 +36,7 @@ export const OurMission: React.FC = ({}: {}) => {
       <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
         {LINKS.map(({ href }) => (
           <Button variant="outlined" component={Link} href={href} key={href}>
-            /how-it-works
+            /prototype
           </Button>
         ))}
       </Grid>

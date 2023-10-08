@@ -24,7 +24,7 @@ const DRAWER_WIDTH = 240;
 const LINKS = [
   { text: "/home", href: "/" },
   { text: "/about-us", href: "/starred" },
-  { text: "/how-it-works", href: "/how-it-works" },
+  { text: "/prototype", href: "/prototype" },
 ];
 
 const PLACEHOLDER_LINKS = [
