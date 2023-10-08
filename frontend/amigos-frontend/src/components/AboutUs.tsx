@@ -10,7 +10,12 @@ import { CardActionArea, CardMedia, Grid } from "@mui/material";
 
 export const AboutUs: React.FC = ({}: {}) => {
   return (
-    <Grid item xs={12} sx={{ paddingLeft: "200px" }}>
+    <Grid
+      id="our-team"
+      item
+      xs={12}
+      sx={{ paddingLeft: "200px", scrollMarginTop: "80px" }}
+    >
       <h1>/our-team</h1>
       <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
         <Card sx={{ width: 250, marginRight: "20px", marginBottom: "20px" }}>

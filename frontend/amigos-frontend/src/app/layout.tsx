@@ -9,28 +9,18 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import SettingsIcon from "@mui/icons-material/Settings";
-import SupportIcon from "@mui/icons-material/Support";
-import LogoutIcon from "@mui/icons-material/Logout";
 import ThemeRegistry from "@/components/ThemeRegistry/ThemeRegistry";
 
 export const metadata = {
-  title: "satellitesage",
+  title: "matedust",
   description: "Amigos Next.js frontend app for NASA Space Challenge 2023",
 };
 
-const DRAWER_WIDTH = 240;
-
 const LINKS = [
-  { text: "/home", href: "/" },
-  { text: "/about-us", href: "/starred" },
-  { text: "/prototype", href: "/prototype" },
-];
-
-const PLACEHOLDER_LINKS = [
-  { text: "Settings", icon: SettingsIcon },
-  { text: "Support", icon: SupportIcon },
-  { text: "Logout", icon: LogoutIcon },
+  { text: "/home", href: "#home" },
+  { text: "/our-mission", href: "#our-mission" },
+  { text: "/our-team", href: "#our-team" },
+  { text: "/prototype", href: "#prototype" },
 ];
 
 export default function RootLayout({
@@ -53,8 +43,8 @@ export default function RootLayout({
                 src="/images/logo.png"
               />
               <Typography variant="h6" noWrap component="div">
-                <span style={{ color: "#ccd6f6" }}>satellite</span>
-                <span style={{ color: "#64ffda" }}>sage</span>
+                <span style={{ color: "#ccd6f6" }}>mate</span>
+                <span style={{ color: "#64ffda" }}>dust</span>
               </Typography>
               <List
                 sx={{

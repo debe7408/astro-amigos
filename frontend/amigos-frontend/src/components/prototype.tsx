@@ -21,18 +21,26 @@ const Prototype: React.FC<Props> = () => {
     },
     {
       name: "4. Acquiring final map with improved predictions",
-      description: "Map view with prediction and current status across the globe",
+      description:
+        "Map view with prediction and current status across the globe",
     },
   ];
 
   return (
-    <Grid container sx={{marginLeft: "200px", maxWidth: "1055px"}}>
+    <Grid
+      id="prototype"
+      container
+      sx={{
+        marginLeft: "200px",
+        maxWidth: "1055px",
+        scrollMarginTop: "80px",
+        textTransform: "lowercase",
+      }}
+    >
       <Grid item xs={12}>
-        <Typography variant="h4" component="h4">
-          /prototype
-        </Typography>
+        <h1>/prototype</h1>
       </Grid>
-      <Grid item xs={12}  sx={{textAlign: "center"}}>
+      <Grid item xs={12} sx={{ textAlign: "center" }}>
         <Carousel items={items} animation="slide" />
       </Grid>
     </Grid>
