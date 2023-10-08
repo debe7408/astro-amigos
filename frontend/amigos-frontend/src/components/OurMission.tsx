@@ -35,7 +35,7 @@ export const OurMission: React.FC = ({}: {}) => {
       </h2>
       <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
         {LINKS.map(({ href }) => (
-          <Button variant="outlined" component={Link} href={href}>
+          <Button variant="outlined" component={Link} href={href} key={href}>
             /how-it-works
           </Button>
         ))}

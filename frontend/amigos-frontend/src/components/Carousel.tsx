@@ -40,14 +40,14 @@ export const Carousel: React.FC<CarouselProps> = ({
   );
 };
 
-const CarouselItem: React.FC<ItemProps> = ({ key, item }) => {
+const CarouselItem: React.FC<ItemProps> = ({ item }) => {
   return (
-    <Paper style={{ height: "550px" }}>
+    <Paper sx={{ height: "550px" }}>
       <Typography variant="h2" component="h2">
         {item.name}
       </Typography>
       {item.name == "Step #1" && <Grid container>
-        <Grid item xs={6} style={{
+        <Grid item xs={6} sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -60,10 +60,10 @@ const CarouselItem: React.FC<ItemProps> = ({ key, item }) => {
               height: 370,
               width: 500,
             }}
-            src="/#"
+            src="/images/current_model_data.jpg"
           />
         </Grid>
-        <Grid item xs={6} style={{
+        <Grid item xs={6} sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -76,7 +76,7 @@ const CarouselItem: React.FC<ItemProps> = ({ key, item }) => {
               height: 370,
               width: 500,
             }}
-            src="/#"
+            src="/images/emit_data.jpg"
           />
 
         </Grid>

@@ -32,7 +32,7 @@ const HowItWorks: React.FC<Props> = () => {
           /how-it-works
         </Typography>
       </Grid>
-      <Grid item xs={12}  style={{textAlign: "center"}}>
+      <Grid item xs={12}  sx={{textAlign: "center"}}>
         <Carousel items={items} animation="slide" />
       </Grid>
     </Grid>
