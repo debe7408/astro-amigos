@@ -39,13 +39,6 @@ export const OurMission: React.FC = ({}: {}) => {
         save lives and protect the environment by bridging the gap in early
         warning systems.
       </h2>
-      <Grid sx={{ display: "flex", flexWrap: "wrap" }}>
-        {LINKS.map(({ href }) => (
-          <Button variant="outlined" component={Link} href={href} key={href}>
-            /prototype
-          </Button>
-        ))}
-      </Grid>
     </Grid>
   );
 };
