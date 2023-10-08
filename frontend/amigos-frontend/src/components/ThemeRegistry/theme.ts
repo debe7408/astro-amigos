@@ -1,11 +1,10 @@
-import { Roboto } from "next/font/google";
+import { NTR } from "next/font/google";
 import { createTheme } from "@mui/material/styles";
 import { colors } from "@/constants/colors";
 
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
+const ntr = NTR({
+  weight: ["400"],
   subsets: ["latin"],
-
   display: "swap",
 });
 
@@ -14,9 +13,27 @@ const theme = createTheme({
     mode: "dark",
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    fontFamily: ntr.style.fontFamily,
   },
   components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          color: "#64ffda",
+          borderColor: "#64ffda",
+          textTransform: "lowercase",
+          "&:hover": { color: "#64ffda", borderColor: "#64ffda" },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          "&:hover": { transform: "scale(1.05)" },
+          transition: "transform 0.15s ease-in-out",
+        },
+      },
+    },
     MuiAlert: {
       styleOverrides: {
         root: ({ ownerState }) => ({
