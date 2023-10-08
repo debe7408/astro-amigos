@@ -33,8 +33,6 @@ const Prototype: React.FC<Props> = () => {
       sx={{
         marginLeft: "200px",
         maxWidth: "1055px",
-        scrollMarginTop: "80px",
-        textTransform: "lowercase",
       }}
     >
       <Grid item xs={12}>
