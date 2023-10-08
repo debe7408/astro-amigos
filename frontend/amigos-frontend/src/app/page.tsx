@@ -16,7 +16,6 @@ export default function HomePage() {
               autoPlay
               muted
               loop
-              poster="polina.jpg"
               id="bgvid"
               style={{
                 objectFit: "cover",
@@ -47,8 +46,18 @@ export default function HomePage() {
                   // WebkitTextFillColor: "transparent",
                 }}
               >
-                <span style={{ color: "#ccd6f6" }}>satellite</span>
-                <span style={{ color: "#64ffda" }}>sage</span>
+                <Grid sx={{display: "flex", alignItems: "center"}}>
+                  <Box
+                    component="img"
+                    sx={{
+                      height: 70,
+                      width: 70,
+                    }}
+                    src="/images/logo.png"
+                  />
+                  <span style={{ color: "#ccd6f6" }}>satellite</span>
+                  <span style={{ color: "#64ffda" }}>sage</span>
+                </Grid>
               </div>
 
               <div
