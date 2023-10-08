@@ -16,9 +16,15 @@ const LINKS = [{ text: "/prototype", href: "/prototype" }];
 export const OurMission: React.FC = ({}: {}) => {
   return (
     <Grid
+      id="our-mission"
       item
       xs={12}
-      sx={{ paddingLeft: "200px", maxWidth: "1200px !important" }}
+      sx={{
+        paddingLeft: "200px",
+        maxWidth: "1200px !important",
+        scrollMarginTop: "80px",
+        textTransform: "lowercase",
+      }}
     >
       <h1>/our-mission</h1>
       <h2>

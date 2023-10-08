@@ -37,7 +37,7 @@ export default function HomePage() {
               <div
                 style={{
                   position: "absolute",
-                  top: "50%",
+                  top: "40%",
                   paddingLeft: "200px",
                   fontSize: "86px",
                   fontWeight: "700",
@@ -47,7 +47,7 @@ export default function HomePage() {
                   // WebkitTextFillColor: "transparent",
                 }}
               >
-                <Grid sx={{display: "flex", alignItems: "center"}}>
+                <Grid sx={{ display: "flex", alignItems: "center" }}>
                   <Box
                     component="img"
                     sx={{
@@ -56,15 +56,15 @@ export default function HomePage() {
                     }}
                     src="/images/logo.png"
                   />
-                  <span style={{ color: "#ccd6f6" }}>satellite</span>
-                  <span style={{ color: "#64ffda" }}>sage</span>
+                  <span style={{ color: "#ccd6f6" }}>mate</span>
+                  <span style={{ color: "#64ffda" }}>dust</span>
                 </Grid>
               </div>
 
               <div
                 style={{
                   position: "absolute",
-                  top: "63%",
+                  top: "53%",
                   paddingLeft: "200px",
                   color: "#8892b0",
                   fontSize: "22px",
