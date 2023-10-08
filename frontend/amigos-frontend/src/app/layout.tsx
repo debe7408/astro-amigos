@@ -21,6 +21,12 @@ const LINKS = [
   { text: "/our-mission", href: "#our-mission" },
   { text: "/our-team", href: "#our-team" },
   { text: "/prototype", href: "#prototype" },
+  {
+    text: "/white-paper",
+    href: "https://github.com/debe7408/astro-amigos/blob/main/docs/whitepaper.pdf",
+    target: "_blank",
+    component: "a",
+  },
 ];
 
 export default function RootLayout({
@@ -55,9 +61,13 @@ export default function RootLayout({
                   whiteSpace: "nowrap",
                 }}
               >
-                {LINKS.map(({ text, href }) => (
+                {LINKS.map(({ text, href, component, target }) => (
                   <ListItem key={href} disablePadding>
-                    <ListItemButton component={Link} href={href}>
+                    <ListItemButton
+                      component={component ? "a" : Link}
+                      href={href}
+                      target={target}
+                    >
                       <ListItemText sx={{ fontWeight: "700" }} primary={text} />
                     </ListItemButton>
                   </ListItem>
