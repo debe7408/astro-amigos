@@ -5,6 +5,7 @@ import { Grid } from "@mui/material";
 import { AboutUs } from "@/components/AboutUs";
 import { OurMission } from "@/components/OurMission";
 import { motion } from "framer-motion";
+import Prototype from "@/components/prototype";
 export default function HomePage() {
   return (
     <Box sx={{ display: "flex", overflow: "hidden" }}>
@@ -89,6 +90,13 @@ export default function HomePage() {
             transition={{ delay: 0.25 }}
           >
             <AboutUs />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.25 }}
+          >
+            <Prototype />
           </motion.div>
         </Grid>
       </Grid>
